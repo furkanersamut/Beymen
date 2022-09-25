@@ -22,12 +22,12 @@ public class AddBasketCaseTest extends InitialTest {
         homePage.UrlControl();
         homePage.ClickSearchBox();
 //        SearchInformation searchInformation = SearchingPool.getSearchFirst();
-        homePage.whatUWannaSearch(homePage.ExceldenOku("1"));
+        homePage.whatUWannaSearch(homePage.ReadFromExcel("1"));
         homePage.ClickEmptyPlace();
         homePage.ClearSearchBox();
         homePage.ClickSearchBox();
 //        searchInformation = SearchingPool.getSearchSecond();
-        homePage.whatUWannaSearch(homePage.ExceldenOku("2"));
+        homePage.whatUWannaSearch(homePage.ReadFromExcel("2"));
         homePage.KeyEnter();
         homePage.ChooseProduct();
         ProductPage productPage = homePage.productPage();
@@ -38,7 +38,6 @@ public class AddBasketCaseTest extends InitialTest {
         productPage.GoToBasket();
         BasketPage basketPage = productPage.basketPage();
         basketPage.ComparePrice(firstPrice);
-//        basketPage.ClickUnitSelectBox();
         basketPage.SelectBoxUnit();
         basketPage.IncreaseUnitCompare(firstPrice);
         basketPage.ClickDeleteButton();
